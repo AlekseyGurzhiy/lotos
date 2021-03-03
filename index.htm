@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title> Lotos - Тестовое задание </title>
+		<link rel="stylesheet" href="css/style.css" />
+		<!-- Подключаем скрипты -->
+		<!--[if IE]>
+			<link rel="stylesheet" href="css/for_ie.css" />
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<script src="js/jquery-1.5.2.min.js"></script>
+		<script src="js/placeholder.min.js"></script>
+		<script src="js/jquery.validate.js"></script>
+		<script src='https://maps.googleapis.com/maps/api/js?sensor=false.js'></script>
+		<script src="js/js.js"></script>
+	</head>
+
+	<body>
+	<!-- Абсолютные элементы -->
+	<div class="darkness"></div> <!-- Блок-затемнитель -->
+	<div class="popap-application">
+		<div class="popap-application_close"></div>
+		<h4 class="popap-application_title"> Заказать звонок </h4>
+		<div class="popap-application_text">Заполните форму и мы обязательно Вам перезвоним</div>
+		<form id="form-application" method="post" action="index.htm">
+		<!-- Поле ввода имени -->
+			<label class="popap-application_form-label" for="popap-application_form-name"> Ваше имя </label>
+			<input id="popap-application_form-name" class="popap-application_form-input application_form-name" name="popap-application_form-name" type="text" value=""> 
+		<!-- Поле ввода телефона -->
+			<label class="popap-application_form-label" for="popap-application_form-phone"> Телефон </label>
+			<input id="popap-application_form-phone" class="popap-application_form-input application_form-phone" name="popap-application_form-phone" type="text" value=""> 
+		<!-- Кнопка "Отправить" -->	
+			<button type="submit" class="popap-application_form-submit">Отправить</button>
+		</form>
+	</div>
+	<!-- Блок "Спасибо за заявку" -->
+	<div class="popap-thanks">
+		<div class="popap-thanks_close"></div>
+		<div class="popap-thanks_title">Спасибо за заявку</div>
+		<div class="popap-thanks_text">Наш менеджер свяжиться с Вами в ближайшее время</div>
+	</div>
+		<!-- Верстаем самый верхний блок с цветами и логотипом -->
+		<header>
+			<div class="central-container">
+				<div class="social-sites"> 
+					<div class="social-sites_text">Мы в социальных сетях:</div>
+					<div class="social-sites_element"> <a href="#"> <img src="img/header-facebook.png" alt="facebook" /> </a> </div>
+					<div class="social-sites_element"> <a href="#"> <img src="img/header-vk.png" alt="facebook" /> </a> </div>
+					<div class="social-sites_element"> <a href="#"> <img src="img/header-twitter.png" alt="facebook" /> </a> </div>
+					<div class="social-sites_element"> <a href="#"> <img src="img/header-ok.png" alt="facebook" /> </a> </div>
+					<div class="social-sites_element"> <a href="#"> <img src="img/header-google.png" alt="facebook" /> </a> </div>
+				</div>
+				<a href="#" class="header-logo"> <img src="img/header-logo.png" alt="лого-лотос" /> </a>
+				<div class="phone-number">
+					<div class="phone-number_tel"> <a href="tel:+0445617474"> (044) 561 7474 </a> </div>
+					<a href="#" class="phone-number_button"> Обратный звонок </a>
+				</div>
+			</div>
+		</header>
+		<div class="under-header">
+			<h1 class="under-header_title"> Свадебные хиты сезона </h1>
+			<div class="central-container">
+				<div class="timer-action">
+					<div class="timer-action_discount-text"> 
+						Оставьте заявку прямо сейчас и получи скидки
+					</div>
+					<div class="timer-action_persent">
+						<div class="timer-action_persent-number">10</div>
+						<div class="timer-action_persent-image"></div>
+					</div>
+					<div class="clear"></div>
+					<div class="timer-action_timer-title">
+						До конца акции осталось:
+					</div>
+					<div class="timer">
+						<div class="timer_element timer_day-tens"> 0 </div>
+						<div class="timer_element timer_day-units"> 0 </div>
+						<div class="timer_separator"></div>
+						<div class="timer_element timer_hours-tens"> 0 </div>
+						<div class="timer_element timer_hours-units"> 0 </div>
+						<div class="timer_separator"></div>
+						<div class="timer_element timer_minutes-tens"> 0 </div>
+						<div class="timer_element timer_minutes-units"> 0 </div>
+						<div class="timer_separator"></div>
+						<div class="timer_element timer_seconds-tens"> 0 </div>
+						<div class="timer_element timer_seconds-units"> 0 </div>
+						<div class="clear"></div>
+						<div class="timer_title"> дней </div>
+						<div class="timer_title"> часов </div>
+						<div class="timer_title"> минут </div>
+						<div class="timer_title"> секунд </div>
+					</div>
+				</div>
+				<div class="entry-form"> 
+					<div class="entry-form_border"> 
+						<div class="entry-form_title"> 
+							Оставьте заявку прямо сейчас
+						</div>
+						<div class="entry-form_message"> 
+							Наш менеджер составит <br> для Вас сценарий церемонии
+						</div>
+						<form id="entry-form_form" action="index.htm" method="post">
+							<input class="entry-form_input entry-form_input-name" name="entry-form_name" type="text" placeholder="Имя:" autocomplete="off">
+							<input class="entry-form_input entry-form_input-phone" name="entry-form_phone" type="text" placeholder="Телефон:" autocomplete="off">
+							<input class="entry-form_input entry-form_input-mail" name="entry-form_email" type="text" placeholder="E-mail:" autocomplete="off">
+							<button class="entry-form_submit" type="submit" name="entry-form_submit">Заказать</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="romantic-history">
+			<h2 class="romantic-history_title"> Романтическая история Вашей свадьбы </h2>
+			<div class="central-container">
+				<!-- Тур по Шри-ланка -->
+				<div class="romantic-tour tour_sri-lanka">
+					<div class="romantic-tour_top-border"></div>
+					<div class="romantic-tour_border"> 
+						<div class="romantic-tour_title"> Шри-ланка	</div>
+						<div class="romantic-tour_price"> от 880 $ </div>
+						<div class="clear"></div>
+						<ul class="romantic-tour_list">
+							<li class="romantic-tour_list-element"> Координатор </li>
+							<li class="romantic-tour_list-element"> 26 фотографий, альбом + негативы </li>
+							<li class="romantic-tour_list-element"> Изящно украшенное место по вашему выбору </li>
+							<li class="romantic-tour_list-element"> Букет и бутоньерка из свежих тропических цветов </li>
+							<li class="romantic-tour_list-element"> Одноярусный свадебный торт </li>
+							<li class="romantic-tour_list-element"> Бутылка вина для пары в течение церемонии </li>
+							<li class="romantic-tour_list-element"> Ужин при свечах из 5 блюд на ваш выбор </li>
+							<li class="romantic-tour_list-element"> Корзина с цветами и фруктами в номере </li>
+						</ul>
+						<a class="romantic-tour_more-info" href="#"> Узнать больше </a>
+					</div>
+					<div class="romantic-tour_bottom-border"></div>
+				</div>
+				<!-- Тур по Греции -->
+				<div class="romantic-tour tour_greece">
+					<div class="romantic-tour_top-border"></div>
+					<div class="romantic-tour_border"> 
+						<div class="romantic-tour_title"> Греция </div>
+						<div class="romantic-tour_price"> от 555 € </div>
+						<div class="clear"></div>
+						<ul class="romantic-tour_list">
+							<li class="romantic-tour_list-element"> Русскоговорящий координатор и церемониймейстер </li>
+							<li class="romantic-tour_list-element"> Трансфер от отеля до места проведения церемонии </li>
+							<li class="romantic-tour_list-element"> Украшение столика и места проведения церемонии </li>
+							<li class="romantic-tour_list-element"> Стандартный Букет невесты и бутоньерка для жениха </li>
+							<li class="romantic-tour_list-element"> Бутылка шампанского по окончании церемонии </li>
+							<li class="romantic-tour_list-element"> 2 украшенных бокала для молодоженов </li>
+							<li class="romantic-tour_list-element"> Музыкальное сопровождение (CD) </li>
+							<li class="romantic-tour_list-element"> Подарок от офиса </li>
+						</ul>
+						<a class="romantic-tour_more-info" href="#"> Узнать больше </a>
+					</div>
+					<div class="romantic-tour_bottom-border"></div>
+				</div>
+				<!-- Тур по Чехии -->
+				<div class="romantic-tour tour_czech">
+					<div class="romantic-tour_top-border"></div>
+					<div class="romantic-tour_border"> 
+						<div class="romantic-tour_title"> Чехия </div>
+						<div class="romantic-tour_price"> от 990 € </div>
+						<div class="clear"></div>
+						<ul class="romantic-tour_list">
+							<li class="romantic-tour_list-element"> Сопровождение сотрудником компании <br> при посещении государственных учреждений </li>
+							<li class="romantic-tour_list-element"> Трансфер в полицию и ЗАГС (в группе <br> на микроавтобусе от общего места отъезда) </li>
+							<li class="romantic-tour_list-element"> Подготовка документов для бракосочетания, <br> согласование и координация с ЗАГСом </li>
+							<li class="romantic-tour_list-element"> Авторизованные переводы на чешский язык <br> и на украинский свидетельства </li>
+							<li class="romantic-tour_list-element"> Перевод свадебной церемонии <br> присяжным переводчиком </li>
+							<li class="romantic-tour_list-element"> Свадебная координация и сопровождение <br> церемонии бракосочетания </li>
+							<li class="romantic-tour_list-element"> Свадебный автомобиль и шампанское <br> во время церемонии </li>
+							<li class="romantic-tour_list-element"> Музыкальное сопровождение <br> церемонии - живая музыка </li>
+						</ul>
+						<a class="romantic-tour_more-info" href="#"> Узнать больше </a>
+					</div>
+					<div class="romantic-tour_bottom-border"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок "Почему мы" -->
+		<div class="why-we">
+			<h2 class="why-we_title"> Почему мы </h2>
+			<div class="central-container">
+				<div class="why-we_cell why-we_number1">
+					<div class="why-we_first-title-№"> №<span class="why-we_first-title-number">1</span> </div>
+					<div class="why-we_first-info"> Первый свадебный <br> туроператор <br> в Украине. </div>
+				</div>
+				<div class="why-we_cell why-we_more25">
+					<div class="why-we_more-title"> Более </div>
+					<div class="why-we_more-title-number"> 25 </div>
+					<div class="why-we_more-info"> Вариантов <br> стилизованных <br> свадеб церемонии. </div>
+				</div>
+				<div class="why-we_cell why-we_persent">
+					<div class="why-we_persent-title"> % </div>
+					<div class="why-we_persent-info"> Всем парам скидки <br> на проживание <br> в отеле. </div>
+				</div>
+				<div class="why-we_cell why-we_country">
+					<div class="why-we_contry-number"> 100 </div>
+					<div class="why-we_contry"> Стран </div>
+					<div class="why-we_contry-info"> Мы охватываем более <br> 100 стран <br> мира. </div>
+				</div>
+				<div class="why-we_cell why-we_propose">
+					<div class="why-we_propose-title"> Более </div>
+					<div class="why-we_propose-title-number"> 100 </div>
+					<div class="why-we_propose-info"> Предложений <br> по официальным <br> свадьбам. </div>
+				</div>
+				<div class="why-we_cell why-we_ceremony">
+					<div class="why-we_ceremony-title"> Более </div>
+					<div class="why-we_ceremony-title-number"> 200 </div>
+					<div class="why-we_ceremony-info"> Предложений <br>по символическим<br> церемониям. </div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок "Что мы можем " -->
+		<div class="we-can">
+			<h2 class="we-can_title"> Что мы можем	</h2>
+			<div class="central-container">
+				<div class="we-can_element we-can_preparation"> Берем на себя подготовку всех необходимых документов под ключ </div>
+				<div class="we-can_element we-can_good-hotels"> Заселяем только в хорошо зарекомендовавшие отели повышенной комфортности </div>
+				<div class="we-can_element we-can_wedding"> Проводим официальное или символическое бракосочетание </div>
+				<div class="we-can_element we-can_coronation"> Скрепляем союз на церемонии венчания устраиваем незабываемый медовый месяц </div>
+				<div class="we-can_element we-can_specialists"> Предоставляем команду специалистов: стилистов, визажистов, парикмахеров, дизайнеров </div>
+				<div class="we-can_element we-can_convoy"> Организуем свадебный кортеж: от кареты с белыми лошадьми до ретро-автомобилей </div>
+				<div class="we-can_element we-can_present"> Дарим подарки всем молодоженам нашего агенства </div>
+				<div class="we-can_element we-can_script"> Разрабатываем индивидуальный сценариц Вашей сваждьбы </div>
+				<div class="clear"></div>
+				<a class="we-can_more-info"> Узнать больше </a>
+			</div>
+		</div>
+		<!-- Блок "Как происходит регистрация" -->
+		<div class="algorithm-registration">
+			<h2 class="algorithm-registration_title"> Как происходит <br> выездная регистрация </h2>
+			<div class="central-container algorithm-steps-bg">
+				<!-- Шаг №1 "Получаем Вашу заявку" -->
+				<div class="algorithm-step-one">
+					<div class="step-one_content">
+						Получаем Вашу заявку
+					</div>
+					<div class="step-one_bottom-border"></div>
+				</div>
+				<!-- Шаг №2 "Выбор тура" -->
+				<div class="algorithm-step-two">
+					<div class="step-two_content">
+						<h3 class="step-two_title"> Выбор тура </h3>
+						<div class="step-two_text">Вы выбираете сценарий проведения идеальной свадьбы, мы придумываем собственный стиль Вашей свадьбы, учитывающий все пожелания и бюджет</div>
+					</div>
+					<div class="step-two_bottom-border"></div>
+				</div>
+				<!-- Шаг №3 "Сбор документов" -->
+				<div class="algorithm-step-three">
+					<div class="step-three_content">
+						<h3 class="step-three_title"> Сбор документов </h3>
+						<div class="step-three_text">Наш специалист помогает правильно оформить и собрать документы необходимые для оформления браков</div>
+					</div>
+					<div class="step-one_bottom-border"></div>
+				</div>
+				<!-- Шаг №4 "Разработка программа" -->
+				<div class="algorithm-step-four">
+					<div class="step-four_content">
+						<h3 class="step-four_title"> Разработка программа </h3>
+						<div class="step-two_text">Мы разрабатываем индивидуальную программу для Вашего торжества. Составим сценарий церемонии, подберем транспорт, фотографов, стилистов, парикмахеров</div>
+					</div>
+					<div class="step-two_bottom-border"></div>
+				</div>
+				<!-- Шаг №5 "Ваша свадьба" -->
+				<div class="algorithm-step-five">
+					<div class="step-three_content">
+						<h3 class="step-three_title"> Ваша свадьба </h3>
+						<div class="step-three_text">Вы отправляетесь в самое незабываемое путешествие в своей жизни и не волнуетесь о мелочах</div>
+					</div>
+					<div class="step-one_bottom-border"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок "Наши молодожены" -->
+		<div class="our-young">
+			<h2 class="our-young_title"> Наши молодожены </h2>
+			<div class="central-container">
+			<!-- Первый блок с Екатериной и Александром в Греции -->
+				<div class="our-young_one-text">
+					<div class="our-young_one-title">
+						Екатерина и Александр, Греция
+					</div>
+					<div class="our-young_one-text-content">
+						Безгранично Благодарим за прекрасную организацию, вдохновляющее настроение во время подготовки, шикарный результат и ту Божественную Энергию, которую вы излучаете! Пусть каждый день будет насыщенным и солнечным, даже когда за окном дождь! ЛЮБВИ Вам во всем! И еще раз СПАСИБО, СПАСИБО, СПАСИБО!!!!!! С любовью, Ваши МЫ
+					</div>
+				</div>
+				<div class="our-young_one-img">
+					<img src="img/young-one.png" alt="Саша и Катя">
+				</div>
+				<div class="our-young_one-separator"></div>
+			<!-- Второй блок с Иванной и Тарасом в Израиле -->
+				<div class="our-young_two-img">
+					<img src="img/young-two.png" alt="Иванна + Тарас - любовь навсегда!">
+				</div>
+				<div class="our-young_two-text">
+					<div class="our-young_two-title">
+						Иванна и Тарас, Израиль
+					</div>
+					<div class="our-young_two-text-content">
+						Ви створили нам казку, яку неможливо забути...Дуже добре,що у Вас виникла ідея про створення такого агенства,я впевнена,що Вас все вийде бездоганно,тому що працюєте Ви професійно на вищому рівні,а найголовніше те,що відчуваєте кожну пару душею,організовуєте все,як для себе,а це дуже важливо!!!!!!!!Рекомендацій у мене,як таких,то немає,єдине це довіритись Вам, і ВСЕ БУДЕ ДОБРЕ !!!!!
+					</div>
+				</div>
+				<div class="our-young_two-separator"></div>
+			<!-- Третий блок с Татьяной и Константином в Кипре -->
+				<div class="our-young_three-text">
+					<div class="our-young_three-title">
+						Татьяна и Константин, Кипр
+					</div>
+					<div class="our-young_three-text-content">
+						Мы вчера вернулись, все прошло отлично. Была очень красивая и романтичная церемония, легко оформили все документы с помощью координатора. Так что еще раз хотим Вас поблагодарить за помощь в таком важном для нас событии
+					</div>
+				</div>
+				<div class="our-young_three-img">
+					<img src="img/young-three.png" alt="Татьяна и Константин">
+				</div>
+				<div class="our-young_three-separator"></div>
+			<!-- Четвертый блок с Маргаритой и Сергеем в Греции -->
+				<div class="our-young_four-img">
+					<img src="img/young-four.png" alt="Маргарита и Сергей">
+				</div>
+				<div class="our-young_four-text">
+					<div class="our-young_four-title">
+						Маргарита и Сергей,<br> Греция, Санторини
+					</div>
+					<div class="our-young_four-text-content">
+						Спасибо за профессиональную подготовку документов и идеальное проведениенашей свадьбы. Все было Замечательно!
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Блок с видео -->
+		<div class="video-travel">
+			<div class="central-container">
+				<h2 class="video-travel_title"> Волнующее путешествие на Мальдивы </h2>
+				<iframe class="iframe" src="http://www.youtube.com/embed/HcLnMFCwV9I?wmode=transparent" allowfullscreen>
+				</iframe>
+			</div>
+		</div>
+		<!-- Блок о свадебных церемониях -->
+		<div class="wedding-ceremony">
+			<div class="central-container">
+				<!-- Левый блок со всей информацией о скидках и таймером -->
+				<div class="about-ceremony">
+					<h2 class="about-ceremony_title"> Свадебная церемония на мальдивах </h2>
+					<div class="about-ceremony_info">
+						<div class="about-ceremony_bid">
+							Оставьте заявку прямо сейчас
+						</div>
+						<div class="about-ceremony_discount">
+							и получи скидки
+						</div>
+						<div class="about-ceremony_number-persent">
+							-10
+						</div>
+						<div class="about-ceremony_persent">
+							%
+						</div>
+					</div>
+					<div class="about-ceremony_timer">
+						<div class="about-ceremony_timer-title">
+							До конца акции осталось:
+						</div>
+						<!-- А вот и сам таймер -->
+						<div class="ceremony-timer">
+							<div class="ceremony-timer_element timer_day-tens"> 0 </div>
+							<div class="ceremony-timer_element timer_day-units"> 0 </div>
+							<div class="ceremony-timer_separator"></div>
+							<div class="ceremony-timer_element timer_hours-tens"> 0 </div>
+							<div class="ceremony-timer_element timer_hours-units"> 0 </div>
+							<div class="ceremony-timer_separator"></div>
+							<div class="ceremony-timer_element timer_minutes-tens"> 0 </div>
+							<div class="ceremony-timer_element timer_minutes-units"> 0 </div>
+							<div class="ceremony-timer_separator"></div>
+							<div class="ceremony-timer_element timer_seconds-tens"> 0 </div>
+							<div class="ceremony-timer_element timer_seconds-units"> 0 </div>
+							<div class="clear"></div>
+							<div class="ceremony-timer_title"> дней </div>
+							<div class="ceremony-timer_title"> часов </div>
+							<div class="ceremony-timer_title"> минут </div>
+							<div class="ceremony-timer_title"> секунд </div>
+						</div>
+					</div>
+				</div>
+				<!-- Блок с формой заявки -->
+				<div class="form-ceremony">
+					<div class="form-ceremony_title">
+						Оставьте заявку прямо сейчас
+					</div>
+					<div class="form-ceremony_text">
+						Наш менеджер составить для Вас сценарий церемонии
+					</div>
+					<!-- Форма заявки -->
+					<form id="form-ceremony_form" action="index.htm" method="post">
+						<!-- Поле ввода имени -->
+						<input id="form-ceremony_name" class="form-ceremony_input form-ceremony_input-name" name="form-ceremony_input-name" type="text" value=""> 
+						<label class="form-ceremony_label-name" for="form-ceremony_name"> Имя: </label>
+						<!-- Поле ввода телефона -->
+						<input id="form-ceremony_phone" class="form-ceremony_input form-ceremony_input-phone" name="form-ceremony_input-phone" type="text" value=""> 
+						<label class="form-ceremony_label-phone" for="form-ceremony_phone"> Телефон: </label>
+						<!-- Поле ввода почты -->
+						<input id="form-ceremony_mail" class="form-ceremony_input form-ceremony_input-mail" name="form-ceremony_input-mail"  type="text" value=""> 
+						<label class="form-ceremony_label-mail" for="form-ceremony_mail"> E-mail: </label>
+						<!-- Кнопка отправки формы -->
+						<button class="form-ceremony_submit" name="form-ceremony_submit" type="submit">Заказать</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- Блок с обратной связью -->
+		<div class="question">
+			<div class="central-container">
+				<span class="still-have-questions">Остались вопросы ?</span> <span class="ask-the-meneger"><span class="ask-the-meneger_border">Задайте их менеджеру!</span></span>
+			</div>
+		</div>
+		<!-- Карта -->
+		<div id="map"></div>
+		<!-- Подвал -->
+		<footer>
+			<div class="central-container">
+				<a href="#" class="footer_logo">
+					<img src="img/footer-logo.png" alt="Логотип подвала">
+				</a>
+				<div class="footer_social-sites"> 
+					<div class="social-sites_element"><a href="#"><img src="img/footer-facebook.png" alt="facebook" /></a></div>
+					<div class="social-sites_element"><a href="#"><img src="img/footer-vk.png" alt="vk" /></a></div>
+					<div class="social-sites_element"><a href="#"><img src="img/footer-twitter.png" alt="twitter" /></a></div>
+					<div class="social-sites_element"><a href="#"><img src="img/footer-ok.png" alt="ok" /></a></div>
+					<div class="social-sites_element"><a href="#"><img src="img/footer-google.png" alt="google" /></a></div>
+				</div>
+				<div class="footer_phone">
+					<div class="footer_phone-number">
+						<a href="tel:+0445617474">(044) 561 7474</a>
+					</div>
+					<a href="#" class="footer_button-submit">Обратный звонок</a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

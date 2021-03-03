@@ -1,0 +1,1218 @@
+/* Подключаем шрифты */
+@font-face {
+	font-family: 'Helvetica_Bold';
+	src: 
+		url('../fonts/HelveticaNeueCyr-Bold.eot') format('eot'), 
+		url('../fonts/HelveticaNeueCyr-Bold.otf')  format('opentype'),
+		url('../fonts/HelveticaNeueCyr-Bold.woff') format('woff'), 
+		url('../fonts/HelveticaNeueCyr-Bold.ttf')  format('truetype');
+}
+
+@font-face {
+	font-family: 'HelveticaNeue_CondensedBold';
+	src: 
+		url('../fonts/HelveticaNeue-CondensedBold.eot') format('eot'), 
+		url('../fonts/HelveticaNeue-CondensedBold.otf')  format('opentype');
+}
+
+@font-face {
+	font-family: 'Helvetica_Light';
+	src: 
+		url('../fonts/HelveticaNeueCyr-Light.eot') format('eot'), 
+		url('../fonts/HelveticaNeueCyr-Light.otf')  format('opentype'),
+		url('../fonts/HelveticaNeueCyr-Light.woff') format('woff'), 
+		url('../fonts/HelveticaNeueCyr-Light.ttf')  format('truetype');
+}
+
+@font-face {
+	font-family: 'Helvetica_Medium';
+	src: 
+		url('../fonts/HelveticaNeueCyr-Medium.eot') format('eot'), 
+		url('../fonts/HelveticaNeueCyr-Medium.otf')  format('opentype'),
+		url('../fonts/HelveticaNeueCyr-Medium.woff') format('woff'), 
+		url('../fonts/HelveticaNeueCyr-Medium.ttf')  format('truetype');
+}
+
+@font-face {
+	font-family: 'Helvetica_Roman';
+	src:
+		url('../fonts/HelveticaNeueCyr-Roman.eot') format('eot'), 
+		url('../fonts/HelveticaNeueCyr-Roman.otf')  format('opentype'),
+		url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff'), 
+		url('../fonts/HelveticaNeueCyr-Roman.ttf')  format('truetype');
+}
+
+/* Оформление тегов */
+html, body {
+	width: 100%;
+}
+
+body {
+	background: white url("../img/background-beach.jpg") no-repeat 50% 25px;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+img {
+	border: none;
+	outline: none;
+}
+
+header {
+	background: url("../img/header-background-flowers.png") no-repeat 50% 0;
+	height: 205px;
+	margin: 0 auto;
+}
+
+/* Общие стили */
+.clear {
+	clear: both;
+}
+
+input.error {
+	border: 1px solid red;
+}
+
+.darkness {
+	position: fixed;
+	display: none;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+}
+
+.popap-application {
+	position: absolute;
+	display: none;
+	left: 50%;
+	top: 339px;
+	border-radius: 3px;
+	background: #eaeee3;
+	z-index: 2;
+	width: 622px;
+	margin-left: -311px;
+}
+
+.popap-application_close, .popap-thanks_close {
+	position: absolute;
+	cursor: pointer;
+	background: url("../img/close.png") no-repeat;
+	right: 15px;
+	top: 15px;
+	width: 14px;
+	height: 14px;
+}
+
+.popap-application_title, .popap-thanks_title {
+	margin: 0;
+	padding: 47px 0 20px;
+	font: 33px HelveticaNeue_CondensedBold;
+	text-align: center;
+	text-transform: uppercase;
+	color: #87c18d;
+}
+
+.popap-application_text, .popap-thanks_text {
+	padding-bottom: 34px;
+	font: 18px Helvetica_Medium;
+	text-align: center;
+	color: #616161;
+}
+
+.popap-application_form-label {
+	float: left;
+	width: 115px;
+	margin-left: 65px;
+	font: 18px/38px Helvetica_Medium;
+	color: #616161;
+}
+
+.popap-application_form-input {
+	border: 1px solid #cccdca;
+	border-radius: 3px;
+	width: 345px;
+	height: 16px;
+	padding: 10px;
+	margin-bottom: 13px;
+	margin-right: 75px;
+	font: 16px/16px Arial;
+	outline: none;
+}
+
+.popap-application_form-submit {
+	display: block;
+	background: linear-gradient(to bottom, #ef77ad 0%,#d4518c 49%,#be3d77 50%,#9e2b5f 100%);
+	background: -webkit-linear-gradient(bottom, #ef77ad 0%,#d4518c 49%,#be3d77 50%,#9e2b5f 100%);
+	border-radius: 6px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	width: 155px;
+	height: 50px;
+	margin: 6px auto 35px;
+	font: 13px Helvetica_Medium;
+	text-transform: uppercase;
+	color: white;
+}
+
+.popap-thanks {
+	position: absolute;
+	z-index: 2;
+	display: none;
+	border-radius: 3px;
+	width: 622px;
+	height: 196px;
+	top: 418px;
+	left: 50%;
+	margin-left: -311px;
+	background: #eaeee3;
+}
+
+/* Стили блоков, необходимых для построения сайта */
+.central-container{
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+/*  Стили к блоку с социальными сетями  */
+.social-sites{
+	float: left;
+	width: 200px;
+	height: 60px;
+	padding-top: 114px;
+	margin-right: 123px;
+}
+
+.social-sites_text{
+	padding-bottom: 12px;
+	font: 14px Helvetica_Roman;
+}
+
+.social-sites_element{
+	float: left;
+	width: 29px;
+	height: 29px;
+	margin-right: 8px;
+}
+
+/*  Стиль для логотипа  */
+.header-logo{
+	float: left;
+	border: none;
+	width: 353px;
+	height: 192px;
+	margin-right: 57px;
+	padding-top: 22px;
+}
+
+/*  Стили к блоку с номером телефона и обратной связью  */
+.phone-number{
+	float: left;
+	width: 267px;
+	height: 51px;
+	padding-top: 89px;
+}
+
+.phone-number_tel{
+	background: url("../img/header-phone.png") no-repeat;
+	height: inherit;
+	padding-left: 37px;
+	font: 33px/55px Helvetica_Medium;
+}
+
+.phone-number_button{
+	float: right;
+	border-radius: 10px;
+	cursor: pointer;
+	background:#7fc287;
+	width: 150px;
+	height: 33px;
+	margin-top: 6px;
+	font: 14px/33px Helvetica_Roman;
+	text-align: center;
+	color: #fff;
+}
+
+/* Стили, для блока под шапкой (Свадебные хиты сезона) */
+.under-header {
+	height: 487px;
+	margin: 0 auto;
+	padding: 32px 0 52px;
+}
+
+.under-header_title {
+	background: url("../img/title-bg.png") no-repeat center;
+	height: 133px;
+	margin-top: 52px;
+	margin-bottom: 0;
+	font: 66px/133px HelveticaNeue_CondensedBold;
+	text-align: center;
+	text-transform: uppercase;
+	color: #7fc287;
+}
+
+/* Стиль для блока с заявками(который справа) */
+.entry-form {
+	float: left;
+	background: url("../img/entry-form-bg.png") no-repeat;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	width: 298px;
+	height: 329px;
+	margin: 16px 1px 0 0;
+}
+
+.entry-form_border {
+	border: 1px dashed transparent;
+	border-radius: 8px;
+	padding: 23px 0px 0 40px;
+}
+
+.entry-form_title {
+	margin-bottom: 15px;
+	font: 26px/28px HelveticaNeue_CondensedBold;
+	text-transform: uppercase;
+	color: #c26d96;
+}
+
+.entry-form_message {
+	padding-bottom: 10px;
+	font: 14px/14px Helvetica_Medium;
+	color: #575757;
+}
+
+.entry-form_input {
+	display: block;
+	border: 1px solid #f3e7d4;
+	border-radius: 3px;
+	outline: none;
+	width: 205px;
+	height: 14px;
+	margin-bottom: 9px;
+	padding: 10px;
+	font: 13px Helvetica_Medium;
+	color: #575757;
+}
+
+.entry-form_submit {
+	border: none;
+	border-radius: 3px;
+	background: #91c997;
+	outline: none;
+	width: 100px;
+	height: 40px;
+	text-transform: uppercase;
+	cursor: pointer;
+	font: 14px Helvetica_Medium;
+	color: #fff;
+}
+
+/* Стиль для блока слева (таймер акции) */
+.timer-action {
+	float: left;
+	width: 483px;
+	height: 224px;
+	padding: 30px 0 0 42px;
+	margin-right: 174px;
+	margin-top: 95px;
+	background: url("../img/timer-action-bg.png") no-repeat;
+	color: #404040;
+}
+
+.timer-action_discount-text {
+	float: left;
+	width: 65%;
+	margin-top: 19px;
+	font: 22px/28px Helvetica_Roman;
+	text-transform: uppercase;
+}
+
+.timer-action_persent {
+	position: relative;
+	float: left;
+	height: 69px;
+	padding-left: 2px;
+	font: 82px/82px Helvetica_Medium;
+}
+
+.timer-action_persent-image {
+	position: absolute;
+	width: 39px;
+	height: 34px;
+	right: -20px;
+	bottom: 0;
+	background: url("../img/percent.png") no-repeat;
+}
+
+.timer-action_timer-title {
+	margin-top: 19px;
+	font: 18px Helvetica_Roman;
+	color: #70716f;
+}
+
+.timer {
+	height: 70px;
+	margin-top: 14px;
+}
+
+.timer_element {
+	float: left;
+	background: url("../img/timer-digit.png") no-repeat;
+	overflow: hidden;
+	width: 40px;
+	height: 52px;
+	margin-right: 6px;
+	text-align: center;
+	font: bold 38px/52px Verdana;
+	letter-spacing: -1px;
+	color: #c74e88;
+}
+
+.timer_separator {
+	float: left;
+	background: url("../img/timer-separator.png") no-repeat center;
+	width: 13px;
+	height: 52px;
+	margin-right: 6px;
+}
+
+.timer_title {
+	float: left;
+	width: 85px;
+	height: 24px;
+	margin-right: 25px;
+	font: 15px/24px Helvetica_Roman;
+	text-align: center;
+	color: #707070;
+}
+
+/* Стили для блока "Романтическая история" */
+.romantic-history {
+	background: url("../img/background-romantic-history.jpg") no-repeat 50% 0px;
+	background-size: auto 100%;
+	min-height: 1927px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+
+.romantic-history_title {
+	padding-top: 52px;
+	padding-bottom: 4px;
+	text-align: center;
+	font: 51px HelveticaNeue_CondensedBold;
+	text-transform: uppercase;
+	color: #7fbd86;
+}
+
+.romantic-tour_top-border {
+	height: 21px;
+	background: url("../img/tour_sri-lanka_top.png") no-repeat;
+}
+
+.romantic-tour {
+	border-radius: 10px;
+	margin-left: 412px;
+	margin-bottom: 30px;
+}
+
+.romantic-tour_bottom-border {
+	height: 21px;
+	background: url("../img/tour_sri-lanka_bottom.png") no-repeat;
+}
+
+.romantic-tour_border {
+	background: url("../img/tour_sri-lanka_middle.png") repeat-y;
+	padding: 17px 8px 18px 42px;
+}
+
+.romantic-tour_title {
+	float: left;
+	text-transform: uppercase;
+	font: 33px HelveticaNeue_CondensedBold;
+	color: #5e5e5e;
+}
+
+.romantic-tour_price {
+	float: left;
+	padding-left: 34px;
+	font: 33px/42px Helvetica_Bold;
+	color: #5e5e5e;
+}
+
+.romantic-tour_list {
+	margin-top: 11px;
+	padding: 0;
+	list-style: none;
+}
+
+.romantic-tour_list-element {
+	background: url("../img/list-style1.png") no-repeat left 60%;
+	padding: 8px 35px 6px 32px;
+	font: 18px/22px Helvetica_Roman;
+	color: #454545;
+}
+
+.romantic-tour_more-info {
+	display: block;
+	border-radius: 3px;
+	background: #91c997;
+	width: 220px;
+	height: 55px;
+	margin-top: 21px;
+	font: 20px/55px Helvetica_Medium;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+/* Стили для блока "Почему мы" */
+.why-we {
+	height: 790px;
+	margin: 0 auto;
+	background: url("../img/background-why-we.jpg") no-repeat center top;
+}
+
+.why-we_title {
+	font: 55px HelveticaNeue_CondensedBold;
+	margin: 0 0 0 10px;
+	padding-top: 31px;
+	text-align: center;
+	color: #000;
+}
+
+.why-we_cell {
+	float: left;
+	width: 315px;
+	height: 348px;
+	margin-right: 2px;
+	text-align: center;
+	color: #d11d5b;
+}
+
+.why-we_cell:nth-child(3n-2) {
+	margin-left: 40px;
+}
+
+/* Стили для ячейки "№1" */
+.why-we_first-title-№ {
+	font: 47px Helvetica_Bold;
+	height: 80px;
+	margin: 95px auto 0;
+	padding-right: 5px;
+}
+
+.why-we_first-title-number {
+	font-size: 66px;
+}
+
+.why-we_first-info {
+	font: 24px/26px Helvetica_Roman;
+	margin-top: 49px;
+	padding-left: 10px;
+	color: #5c5c5c;
+}
+
+/* Стили для ячейки "Более 25" */
+.why-we_more-title {
+	font: 29px Helvetica_Bold;
+	margin-top: 92px;
+	padding-left: 6px;
+}
+
+.why-we_more-title-number {
+	font: 62px/59px Helvetica_Bold;
+	height: 59px;
+	padding-left: 6px;
+}
+
+.why-we_more-info {
+	font: 24px/26px Helvetica_Roman;
+	margin-top: 41px;
+	padding-left: 6px;
+	color: #5c5c5c;
+}
+
+/* Стили для ячейки "%" */
+.why-we_persent-title {
+	font: 96px Helvetica_Bold;
+	margin-top: 92px;
+	padding-right: 11px;
+}
+
+.why-we_persent-info {
+	font: 24px/26px Helvetica_Roman;
+	margin-top: 24px;
+	padding-left: 2px;
+	color: #5c5c5c;
+}
+
+/* Стили для ячейки "100 стран" */
+.why-we_contry-number {
+	font: 60px Helvetica_Bold;
+	margin-top: 57px;
+	padding-left: 10px;
+}
+
+.why-we_contry {
+	font: 28px/22px Helvetica_Bold;
+	padding-left: 10px;
+}
+
+.why-we_contry-info {
+	font: 24px/26px Helvetica_Roman;
+	margin-top: 60px;
+	padding-left: 10px;
+	color: #5c5c5c;
+}
+
+/* Стили для ячейки "Более 100" */
+.why-we_propose-title {
+	font: 29px Helvetica_Bold;
+	margin-top: 59px;
+	padding-left: 6px;
+}
+
+.why-we_propose-title-number {
+	font: 62px/59px Helvetica_Bold;
+	height: 59px;
+	padding-left: 6px;
+}
+
+.why-we_propose-info {
+	font: 24px/26px Helvetica_Roman;
+	margin-top: 56px;
+	padding-left: 6px;
+	color: #5c5c5c;
+}
+
+/* Стили для ячейки "Более 200" */
+.why-we_ceremony-title {
+	font: 29px Helvetica_Bold;
+	margin-top: 59px;
+	padding-left: 2px;
+}
+
+.why-we_ceremony-title-number {
+	font: 62px/59px Helvetica_Bold;
+	height: 59px;
+	padding-left: 2px;
+}
+
+.why-we_ceremony-info {
+	font: 24px/26px Helvetica_Roman;
+	margin-top: 56px;
+	padding-left: 2px;
+	color: #5c5c5c;
+}
+
+/* Стили для блока "Что мы можем" */
+.we-can {
+	background: url("../img/we-can-bg.jpg") no-repeat top center;
+	height: 957px;
+	margin: 0 auto;
+}
+
+.we-can_title {
+	margin: 0;
+	padding-top: 26px;
+	padding-bottom: 26px;
+	text-align: center;
+	font: 55px HelveticaNeue_CondensedBold;
+	color: #3a3a3a;
+}
+
+.we-can_element {
+	float: left;
+	width: 333px;
+	min-height: 125px;
+	padding: 22px 30px 37px 137px;
+	font: 25px/28px Helvetica_Roman;
+	color: #4c4c4c;
+}
+
+.we-can_preparation {
+	background: url("../img/icon1.png") no-repeat left top;
+}
+
+.we-can_good-hotels {
+	background: url("../img/icon2.png") no-repeat left top;
+}
+
+.we-can_wedding {
+	background: url("../img/icon3.png") no-repeat left top;
+}
+
+.we-can_coronation {
+	background: url("../img/icon4.png") no-repeat left top;
+}
+
+.we-can_specialists {
+	background: url("../img/icon5.png") no-repeat left top;
+}
+
+.we-can_convoy {
+	background: url("../img/icon6.png") no-repeat left top;
+}
+
+.we-can_present {
+	background: url("../img/icon7.png") no-repeat left top;
+}
+
+.we-can_script {
+	background: url("../img/icon8.png") no-repeat left top;
+}
+
+.we-can_more-info {
+	display: block;
+	background: #e36491;
+	border-radius: 10px;
+	width: 215px;
+	height: 60px;
+	margin: 0 auto;
+	font: 24px/60px Helvetica_Roman;
+	text-align: center;
+	color: #fff;
+}
+
+/* Стили для блока "Как происходит регистрация" */
+.algorithm-registration {
+	background: url("../img/background-algorithm-registration.jpg") no-repeat center top;
+	height: 1130px;
+	margin: 0 auto;
+	color: #666;
+}
+
+.algorithm-registration_title {
+	margin: 0 auto;
+	padding: 40px 0 55px;
+	font: 55px/55px HelveticaNeue_CondensedBold;
+	text-align: center;
+	color: #000;
+}
+
+.algorithm-steps-bg {
+	background: url("../img/steps-bg.png") no-repeat center 31px;
+}
+
+/* Стили для блока Шаг №1 "Получаем Вашу заявку" */
+.algorithm-step-one {
+	position: relative;
+	left: -10px;
+	width: 456px;
+	height: 149px;
+	background: url("../img/step-one-background.png") no-repeat top left;
+}
+
+.step-one_content {
+	padding: 53px 20px 15px 35px;
+	font: 33px Helvetica_Bold;
+}
+
+.step-one_bottom-border {
+	position: absolute;
+	background: url("../img/step-one-bottom.png") no-repeat left;
+	width: 100%;
+	height: 14px;
+	bottom: -10px;
+}
+
+/* Стили для блока Шаг №2 "Выбор тура" */
+.algorithm-step-two {
+	position: relative;
+	background: url("../img/step-two-background.png") no-repeat;
+	width: 440px;
+	height: 182px;
+	top: -27px;
+	left: 560px;
+}
+
+.step-two_bottom-border {
+	position: absolute;
+	background: url("../img/step-two-bottom.png") no-repeat right;
+	width: 100%;
+	height: 14px;
+	bottom: -10px;
+}
+
+.step-two_title {
+	padding: 28px 0 0 30px;
+	margin-bottom: 0;
+	font: 33px Helvetica_Bold;
+}
+
+.step-two_text {
+	padding: 1px 20px 0 30px;
+	font: 18px/24px Helvetica_Roman;
+}
+
+/* Стили для блока Шаг №3 "Сбор документов" */
+.algorithm-step-three {
+	position: relative;
+	background: url("../img/step-one-background.png") no-repeat top left;
+	width: 456px;
+	height: 152px;
+	top: -36px;
+	left: -10px;
+}
+
+.step-three_title {
+	margin-bottom: 0;
+	padding: 23px 0 0 30px;
+	font: 33px Helvetica_Bold;
+}
+
+.step-three_text {
+	padding: 1px 30px 0 30px;
+	font: 18px/24px Helvetica_Roman;
+}
+
+/* Стили для блока Шаг №4 "Разработка программа" */
+.algorithm-step-four {
+	position: relative;
+	background: url("../img/step-two-background.png") no-repeat;
+	top: -51px;
+	left: 560px;
+	width: 440px;
+	height: 177px;
+}
+
+.step-four_title {
+	margin-bottom: 0;
+	padding: 23px 0 0 30px;
+	font: 33px Helvetica_Bold;
+}
+
+/* Стили для блока Шаг №5 "Ваша свадьба" */
+.algorithm-step-five {
+	position: relative;
+	background: url("../img/step-one-background.png") no-repeat top left;
+	top: -85px;
+	left: -10px;
+	width: 456px;
+	height: 152px;
+}
+
+/* Стили для блока "Наши молодожены" */
+.our-young {
+	background: url("../img/background-young.jpg") repeat;
+	height: 2146px;
+	margin: 0 auto;
+}
+
+.our-young_title {
+	margin: 0;
+	padding: 40px 0 38px;
+	text-align: center;
+	font: 55px HelveticaNeue_CondensedBold;
+	color: #c14d85;
+}
+/* Стили для первого блока */
+.our-young_one-text {
+	float: left;
+	width: 495px;
+	padding: 31px 0 0 75px;
+}
+
+.our-young_one-title {
+	font: 28px Helvetica_Bold;
+	color: #c55289;
+}
+
+.our-young_one-text-content {
+	padding-top: 1px;
+	font: 22px/33px Helvetica_Roman;
+}
+
+.our-young_one-img {
+	float: right;
+	width: 427px;
+	padding-bottom: 5px;
+	text-align: right;
+}
+
+.our-young_one-separator {
+	clear: both;
+	background: url("../img/separator.png") no-repeat 95px 50%;
+	width: 100%;
+	height: 115px;
+}
+
+/*Стили для второго блока*/
+.our-young_two-img {
+	float: left;
+	width: 476px;
+	text-align: right;
+}
+
+.our-young_two-text {
+	float: left;
+	width: 524px;
+	padding-top: 1px;
+}
+
+.our-young_two-title {
+	font: 28px Helvetica_Bold;
+	text-align: right;
+	color: #c55289;
+}
+
+.our-young_two-text-content {
+	padding-top: 1px;
+	padding-left: 70px;
+	font: 22px/33px Helvetica_Roman;
+	text-align: right;
+}
+
+.our-young_two-separator {
+	clear: both;
+	background: url("../img/separator.png") no-repeat 55px 54%;
+	width: 100%;
+	height: 100px;
+	margin-bottom: 0px;
+}
+
+/* Стили для третьего блока */
+.our-young_three-text {
+	float: left;
+	width: 507px;
+	padding: 31px 0 0 75px;
+}
+
+.our-young_three-title {
+	margin-top: 49px;
+	padding-left: 5px;
+	font: 28px Helvetica_Bold;
+	color: #c55289;
+}
+
+.our-young_three-text-content {
+	padding: 1px 0 0 5px;
+	font: 22px/33px Helvetica_Roman;
+}
+
+.our-young_three-img {
+	float: right;
+	width: 405px;
+	padding: 0 3px 5px 0;
+	text-align: right;
+}
+
+.our-young_three-separator {
+	clear: both;
+	background: url("../img/separator.png") no-repeat 50px 50%;
+	width: 100%;
+	height: 85px;
+	margin-bottom: 0px;
+}
+
+/* Стили для четвертого блока */
+.our-young_four-img {
+	float: left;
+	width: 476px;
+	text-align: right;
+}
+
+.our-young_four-text {
+	float: left;
+	width: 524px;
+	padding-top: 136px;
+}
+
+.our-young_four-title {
+	font: 28px/33px Helvetica_Bold;
+	text-align: right;
+	color: #c55289;
+}
+
+.our-young_four-text-content {
+	padding-left: 100px;
+	font: 22px/33px Helvetica_Roman;
+	text-align: right;
+}
+
+/* Стили для блока с видео */
+.video-travel {
+	background: #e6eadc;
+	height: 565px;
+	margin: 0 auto;
+	padding-bottom: 40px;
+}
+
+.video-travel_title {
+	margin: 0;
+	padding: 33px 0 33px 8px;
+	font: 35px HelveticaNeue_CondensedBold;
+	text-align: center;
+	color: #575757;
+}
+
+.iframe {
+	display: block;
+	background: url("../img/video.jpg") no-repeat;
+	width: 958px;
+	height: 456px;
+	margin: 0 auto;
+}
+
+/* Стили для блока со свадебными церемониями */
+.wedding-ceremony {
+	background: url("../img/background-wedding-ceremony.jpg") no-repeat center top;
+	height: 320px;
+	margin: 0 auto;
+}
+
+/* Левая часть с информацией о скидках и таймером */
+.about-ceremony {
+	float: left;
+	width: 720px;
+	height: inherit;
+}
+
+.about-ceremony_title {
+	margin: 0;
+	padding: 52px 0 23px;
+	font: 33px HelveticaNeue_CondensedBold;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.about-ceremony_info {
+	float: left;
+	width: 310px;
+	height: 100px;
+	color: #fff;
+}
+
+.about-ceremony_bid {
+	font: 25px/29px Helvetica_Roman;
+	text-transform: uppercase;
+}
+
+.about-ceremony_discount {
+	float: left;
+	width: 89px;
+	padding-top: 22px;
+	font: 17px/20px Helvetica_Medium;
+	text-transform: uppercase;
+}
+
+.about-ceremony_number-persent {
+	float: left;
+	margin-left: -14px;
+	margin-top: 1px;
+	font: 100px Helvetica_Medium;
+	letter-spacing: -5px;
+}
+
+.about-ceremony_persent {
+	padding-top: 39px;
+	font: 58px Helvetica_Roman;
+}
+
+/* Таймер для блока со свадебными церемониями */
+.about-ceremony_timer {
+	float: left;
+	width: 410px;
+	height: 100px;
+}
+
+.about-ceremony_timer-title {
+	margin-top: 59px;
+	font: 15px Helvetica_Roman;
+	color: #fff;
+}
+
+.ceremony-timer {
+	margin-top: 5px;
+}
+
+.ceremony-timer_element {
+	float: left;
+	background: url("../img/timer-digit.png") no-repeat;
+	overflow: hidden;
+	width: 35px;
+	height: 46px;
+	margin-right: 5px;
+	font: bold 32px/46px Verdana;
+	text-align: center;
+	letter-spacing: -1px;
+	color: #c74e88;
+}
+
+.ceremony-timer_separator {
+	float: left;
+	background: url("../img/timer-separator-ceremony.png") no-repeat center;
+	width: 13px;
+	height: 50px;
+	margin-right: 6px;
+}
+
+.ceremony-timer_title {
+	float: left;
+	width: 75px;
+	height: 19px;
+	margin-right: 25px;
+	font: 15px/19px Helvetica_Roman;
+	text-align: center;
+	color: #fff;
+}
+
+/* Форма ввода заявки на блоке о свадебных церемониях */
+.form-ceremony {
+	float: left;
+	width: 277px;
+	height: inherit;
+	padding-right: 3px;
+}
+
+.form-ceremony_title {
+	margin: 41px 0 0 75px;
+	font: 23px/25px HelveticaNeue_CondensedBold;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.form-ceremony_text {
+	width: 173px;
+	margin: 15px 0 0 75px;
+	padding-bottom: 8px;
+	font: 12px/12px Helvetica_Medium;
+	color: #fff;
+}
+
+.form-ceremony_label-name, .form-ceremony_label-phone, .form-ceremony_label-mail {
+	float: right;
+	font: 14px/30px Helvetica_Medium;
+	color: #fff;
+}
+
+.form-ceremony_input {
+	float: right;
+	border: 1px solid #94d8f0;
+	border-radius: 3px;
+	outline: none;
+	width: 184px;
+	height: 12px;
+	margin-left: 7px;
+	margin-bottom: 8px;
+	padding: 8px;
+	font-size: 13px;
+	color: #000;
+}
+
+.form-ceremony_submit {
+	background: linear-gradient(to bottom, #d95f9a 0%,#c84e89 49%,#ba407b 100%);
+	background: -webkit-linear-gradient(bottom, #d95f9a 0%,#c84e89 50%,#ba407b 100%);
+	border: 0;
+	border-radius: 5px;
+	outline: none;
+	cursor: pointer;
+	width: 92px;
+	height: 35px;
+	margin: 5px 0 0 75px;
+	font: 14px Helvetica_Medium;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+/* Стили для блока с обратной связью */
+.question {
+	background: linear-gradient(to bottom, #89c08f 0%,#79c381 100%);
+	background: -webkit-linear-gradient(bottom, #89c08f 0%,#79c381 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr=#89c08f,endColorstr=#79c381,GradientType=0);
+	height: 66px;
+	margin: 0 auto;
+	font: 30px/64px Helvetica_Roman;
+	text-transform: uppercase;
+	color: white;
+}
+
+.still-have-questions {
+	margin-left: 170px;
+}
+
+.ask-the-meneger {
+	background: url("../img/arr.png") no-repeat right 5px;
+	cursor: pointer;
+	padding-right: 43px;
+}
+
+.ask-the-meneger_border {
+	border-bottom: 2px solid white;
+}
+
+.ask-the-meneger:hover .ask-the-meneger_border {
+	border: none;
+}
+
+#map {
+	height: 435px;
+	margin: 0 auto;
+}
+/* Стили для подвала */
+footer {
+	background: #e6eadc;
+	border-top: 6px solid #d7dacd;
+	height: 136px;
+	margin: 0 auto;
+}
+
+.footer_logo {
+	float: left;
+	border: none;
+	width: 158px;
+	padding-top: 16px;
+}
+
+.footer_social-sites {
+	float: left;
+	height: 30px;
+	margin: 55px 0 0 224px;
+}
+
+.footer_phone {
+	float: left;
+	width: 228px;
+	margin-left: 205px;
+	padding-top: 28px;
+}
+
+.footer_phone-number {
+	font: 34px Helvetica_Roman;
+	text-align: right;
+	color: #414141;
+}
+
+.footer_button-submit {
+	float: right;
+	display: block;
+	background: linear-gradient(to bottom, #d95f9a 0%,#c84e89 49%,#ba407b 100%);
+	background: -webkit-linear-gradient(bottom, #d95f9a 0%,#c84e89 50%,#ba407b 100%);
+	border-radius: 10px;
+	width: 150px;
+	height: 33px;
+	margin-top: 11px;
+	font: 14px/33px Helvetica_Roman;
+	text-align: center;
+	color: #fff;
+}
+
+/* Адаптивные стили */
+@media (min-width:320px) and (max-width:1000px) {
+	body {
+		width: 1000px;
+	}
+}
+@media (min-width:1920px) {
+	@viewport { width: 1920px; }
+
+	html, body{
+		width: 1920px;
+	}
+}
